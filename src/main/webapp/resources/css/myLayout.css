@@ -1,0 +1,144 @@
+@import url("/LearnJavascript_mvn/resources/css/reset.css");
+
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    /*https://fonts.google.com/specimen/Roboto?selection.family=Roboto*/
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color:#333;
+}
+
+/*****************http://j4n.co/blog/Creating-your-own-css-grid-system***********************************/
+/*apply border box sizing to all elements*/
+* {box-sizing: border-box;}
+
+.grid-container{
+    /* width: 100%; */
+    /* max-width: 1200px;*/
+
+    /* custom to center horizontally*/
+    width: 90%;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*-- our cleafix hack -- */ 
+.row:before, 
+.row:after {
+    content:"";
+    display: table ;
+    clear:both;
+}
+/*
+To find the width of one column, all we have to do is divide the total number of columns 
+by the width of the container. In our case, the width of the container is 100%, and we want 
+6 columns, so 100/6 = 16.66, so our base column width is 16.66%.
+*/
+/*
+Before the 'border-box' box-sizing model, giving percentage-width elements a static padding 
+was a real pain. Luckily, using the 'border-box' model, we can create gutters with ease.
+*/
+
+[class*='col-'] {
+    float: left; 
+    min-height: 1px; 
+    width: 16.66%; 
+    /*-- our gutter -- */
+    padding: 12px; 
+    background-color: #FFFFFF;
+}
+/*
+This of course, is just the beginning. If we want a section that's 2 columns wide, we have 
+to create an 2-column-wide column. The calculations are pretty simple.
+*/
+
+.col-1{ width: 16.66%; }
+.col-2{ width: 33.33%; }
+.col-3{ width: 50%;    }
+.col-4{ width: 66.66%; }
+.col-5{ width: 83.33%; }
+.col-6{ width: 100%;   }
+
+/*.outline, .outline *{
+    outline: 1px solid #FFFFFF; 
+}/*
+
+
+/*-- some extra column content styling --*/
+[class*='col-'] > p {
+    background-color: #FFFFFF; 
+    padding: 0;
+    margin: 0;
+    text-align: center; 
+    color: black; 
+}
+
+h1{
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-bottom: .5em;
+    margin-top: .5em;
+}
+h2{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: .5em;
+    margin-top: .5em;
+}
+h3{
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: .5em;
+    margin-top: .5em;
+}
+pre {
+    font-family: 'Roboto Mono', monospace;
+    color: #EAD4D4;
+    background-color: #1f0000;
+    padding: 2em;
+    margin: 1em;
+    margin-left: 2em;
+}
+pre code{
+    line-height: 1.7em;
+    font-size: 1.1em;
+}
+.spacer{
+    height: 1em;
+    width: 100%;
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding:0px;
+}
+/* default styles https://www.w3schools.com/tags/tag_ul.asp */
+ul { 
+    display: block;
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+}
+/* https://www.w3schools.com/tags/tag_li.asp */
+li {
+    display: list-item;
+}
+li {
+    margin-top: .5em;
+    margin-bottom: .5 em;
+    
+}
+/* https://www.w3schools.com/tags/tag_em.asp  */
+em { 
+    font-style: italic;
+}
+em { 
+    font-weight: bold;
+    font-size: larger;
+}

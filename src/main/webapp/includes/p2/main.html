@@ -1,0 +1,89 @@
+<div style="text-align: left">
+    <h2>In the head</h2>
+    <pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+    function myFunction() {
+        alert('This script was executed from the head');
+    }
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;h1&gt;My Web Page&lt;/h1&gt;
+
+&lt;p id="demo"&gt;A Paragraph&lt;/p&gt;
+
+&lt;button type="button" onclick="myFunction()"&gt;Execute head script&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+    </pre>
+    <div>
+        <button type="button" onclick="myFunction()">Execute head script</button>
+    </div>
+</div>
+<div class="spacer"></div>
+<div style="text-align: left">
+    <h2>In the body</h2>
+    <pre>
+<code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt; 
+
+&lt;h1&gt;My Web Page&lt;/h1&gt;
+
+&lt;p id="demo"&gt;A Paragraph&lt;/p&gt;
+
+&lt;button type="button" onclick="myFunction2()"&gt;Execute body script&lt;/button&gt;
+
+&lt;script&gt;
+function myFunction2() {
+   alert('This script was executed from the body');
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+    </pre>
+    <div>
+        <button type="button" onclick="myFunction2()">Execute body script</button>
+    </div>
+
+
+<div class="spacer"></div>
+<div style="text-align: left">
+    <h2>Load in external script</h2>
+    <pre>
+    <code>
+        &lt;script src="resources/js/p2/main.js">&lt;/script>
+    </code>
+    </pre>
+    <h3>main.js</h3>
+    <pre>
+    <code>
+/* 
+ */
+
+function xfunc1(){
+    alert("External Function");
+}
+
+    </code>
+    </pre>
+    <h3>call xfunc1()</h3>
+    <pre>
+    <code>
+        &lt;button onclick="xfunc1();">call xfunc1()&lt;/button>
+    </code>
+    </pre>
+    <button onclick="xfunc1();">call xfunc1()</button>
+</div>
+

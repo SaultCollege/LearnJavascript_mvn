@@ -1,0 +1,111 @@
+<div style="text-align: left">
+    <h2>Number Guessing Game</h2>
+    <p>Run <a target="_blank" href="includes/p3/numberGuessingGame.html">numberGuessingGame.html...</a></p>
+<div class="spacer"></div>
+    <h3>Notes</h3>
+    <ul>
+        <li>Do the MDN tutorial above in first steps.  What follows are my own notes.</li>
+    </ul>
+<div class="spacer"></div>
+    <h3>Things I've learned</h3>
+    <ul>
+        <li>Javascript is in the head</li>
+        <li>Javascript is in the head</li>
+        <li>Notes are in the page &lt;ctrl&gt;-u</li>
+        <li><em>Declare variables</em>.  "var" makes it local in scope</li>
+        <li style="display: block;">
+<pre>
+<code>
+var randomNumber = Math.floor(Math.random() * 100) + 1;
+
+var guesses = document.querySelector('.guesses');
+var lastResult = document.querySelector('.lastResult');
+var lowOrHi = document.querySelector('.lowOrHi');
+
+var guessSubmit = document.querySelector('.guessSubmit');
+var guessField = document.querySelector('.guessField');
+
+var guessCount = 1;
+var resetButton;
+</code>
+</pre>
+        </li>
+        <li><em>querySelector</em> (see <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector")>this...</a>) 
+        <ul>
+            <li>Returns the first Element within the document that matches the specified group of selectors</li>
+            <li>Here, return the first element whose class is "guesses"</li>
+        </ul>
+        </li>
+        <li style="display: block;">
+<pre>
+<code>
+var guesses = document.querySelector('.guesses');
+....
+              &lt;p class="guesses"&gt;&lt;/p&gt;
+</code>
+</pre>
+        </li>
+        <li>
+            <em>querySelector example 2</em>
+            <ul>
+                <li>
+                Here, return the first element where an input element with the name 'login' is nested in a div that belongs to classes 'user-panel' and 'main'
+                </li>
+            </ul>
+                <li style='display: block'>
+<pre>
+<code>
+....
+function setLoginName(n){
+    var el = document.querySelector("div.user-panel.main input[name=login]");
+    el.value=n;
+}
+....
+&lt;div class="user-panel main"&gt;
+    Login Name: &lt;input name="login"/&gt;
+&lt;/div&gt;
+....
+&lt;div&gt;
+        &lt;button type="button" onclick="setLoginName('fcarella')"&gt;Set Login Name to fcarella...&lt;/button&gt;
+&lt;/div&gt;
+
+</code>
+</pre>
+                </li>
+        </li>
+        </ul>
+        <ul>
+            <li style='display: block'>
+    <div class="user-panel main">
+        Login Name: <input name="login"/>
+    </div>
+    <div>
+        <button type="button" onclick="setLoginName('fcarella')">Set Login Name to fcarella...</button>
+    </div>
+            </li>
+        </ul>
+
+    </ul>
+
+    
+<div class="spacer"></div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+    <div>
+        <button type="button" onclick="myFunction()">Execute head script</button>
+    </div>
+</div>
+
+<div class="spacer"></div>
+
+<div style="text-align: left">
+    <h2>In the body</h2>
+<pre>
+<code>
+</code>
+</pre>
+    <div>
+        <button type="button" onclick="myFunction2()">Execute body script</button>
+    </div>
+</div>
+
