@@ -4,8 +4,9 @@ body {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     /*https://fonts.google.com/specimen/Roboto?selection.family=Roboto*/
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     color:#333;
+    line-height: 1.5em;
 }
 
 /*****************http://j4n.co/blog/Creating-your-own-css-grid-system***********************************/
