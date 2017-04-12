@@ -143,3 +143,33 @@ em {
     font-weight: bold;
     font-size: larger;
 }
+
+/**/
+fieldset { 
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 2px groove threedface;
+}
+legend {
+    display: block;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: none;
+}
+
+div{
+    overflow-wrap: break-word;
+}
+
+.p4demo em{
+    color:red;
+    font-style: normal;
+}
+.p4div{
+    color:blue;
+}

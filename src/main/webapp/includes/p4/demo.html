@@ -9,12 +9,87 @@ and open the template in the editor.
         <title>p4 demo</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script>
-            var guesses = document.querySelector('.guesses');
-            guesses.value = "this is a guest"
-        </script>
+        <link rel="stylesheet" type="text/css" href="/LearnJavascript_mvn/resources/css/myLayout.css">
+        <!-- fonts see https://fonts.google.com/specimen/Roboto?selection.family=Roboto -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
     </head>
     <body>
-        <p class="guesses">unset guess</>
+        <div id="container" class="grid-container outline p4demo">
+            <div class="row">
+                <h1>Selectors</h1>
+                <a href='https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors'>MDN Documentation...</a>
+            </div>
+            
+            <div class="row">
+                <div class="col-6">
+                    <img src='/LearnJavascript_mvn/resources/images/css syntax - ruleset.png'/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <h1>Simple Selectors</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    &lt;p <em>class='simple'</em>&gt;&lt;p&gt;
+                </div>
+                <div class="col-2">
+                    document.querySelector(<em>'.simple'</em>).textContent='Hello World'
+                </div>
+                <div class="col-1">
+                    <p id="id_simple" class="simple"></p>
+                </div>
+                <div class="col-1">
+                    <button onclick="document.querySelector('.simple').textContent = 'Hello World'">Execute:</button>
+                </div>
+                <div class="col-1">
+                    <button onclick="document.querySelector('.simple').textContent = ''">Reset:</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <div class='p4div'>
+                        &lt;p id="id_e1" <em>class="class_e1"</em>&gt;&lt;/p&gt;
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div style="">
+                        document.querySelector(<em>'.class_e1'</em>).textContent='Hello World'
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div>
+                        <p id="id_e1" class="class_e1"></p>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div>
+                        <button onclick="document.querySelector('.class_e1').textContent = 'Hello World'">Execute:</button></div>
+                </div>
+                <div class="col-1">
+                    <div>
+                        <button onclick="document.querySelector('.class_e1').textContent = ''">Reset:</button>                </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    aa
+                </div>
+                <div class="col-2">
+                    aa
+                </div>
+                <div class="col-1">
+                    aa
+                </div>
+                <div class="col-1">
+                    aa
+                </div>
+                <div class="col-1">
+                    aa
+                </div>
+            </div>
+        </div>
+           
     </body>
 </html>
