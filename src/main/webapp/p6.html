@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Learn Javascript</title>
+        <!-- use templates see https://www.w3schools.com/howto/howto_html_include.asp -->
+        <script src="https://www.w3schools.com/lib/w3data.js"></script>
+        <!-- import css -->
+        <link rel="stylesheet" type="text/css" href="/LearnJavascript_mvn/resources/css/myLayout.css">
+        <!-- fonts see https://fonts.google.com/specimen/Roboto?selection.family=Roboto -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+        <script>
+        </script>
+    </head>
+    <body id="body">
+        <div id="container" class="grid-container outline">
+            <div class="row" style="max-height: 100px;min-height: 50px">
+                <div w3-include-html="includes/header.html"></div>
+            </div>
+            <div class="row">
+                <div w3-include-html="includes/p6/content.html"></div>
+            </div>
+        </div>
+        <script>
+            w3IncludeHTML();
+        </script>
+
+    </body>
+</html>

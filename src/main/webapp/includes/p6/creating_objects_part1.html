@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>p5 demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/LearnJavascript_mvn/resources/css/myLayout.css">
+        <!-- fonts see https://fonts.google.com/specimen/Roboto?selection.family=Roboto -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+
+        <link rel="stylesheet" href="/LearnJavascript_mvn/resources/highlight/styles/googlecode.css">
+        <script src="/LearnJavascript_mvn/resources/highlight/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </head>
+    <body>
+        <div style="background-color: white;;padding:10px;z-index: 100;position: fixed;border:1px solid red;right:10px;top:10px;min-width:200px;min-height:100px">
+            <div>
+                <fieldset>
+                    <legend>
+                        <h2>Input</h2>
+                    </legend>
+                    <div class="col-6 p4div">
+                        <div>
+                            <label for="jscode">Enter code:</label>
+                            <input class="jscode" type="text">
+                            <button class="button1">Submit code</button>
+                            <h3>Result</h3>
+                            <p class="p1">no text</p>
+                        </div>
+                    </div>
+                    <script>
+                        var input = document.querySelector('.jscode');
+                        var btn = document.querySelector('.button1');
+                        var para = document.querySelector('.p1');
+                        btn.onclick = function () {
+                            var code = input.value;
+                            para.textContent = eval(code);
+                        }
+                    </script>
+
+                </fieldset>
+            </div>            
+        </div>
+        <div id="container" class="grid-container outline p4demo">
+            <div class="row">
+                <div class="col-6">
+                    <a href="/LearnJavascript_mvn/p5.html">Back...</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <h1>Creating Objects Part 1</h1>
+                    <a target="_blank" href='https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS'>MDN Documentation...</a>
+                </div>
+            </div>
+
+            <fieldset>
+                <legend>
+                    <h2>Creating Objects</h2>
+                </legend>
+                <!-- -->
+                <fieldset>
+                    <legend>
+                        <h2>with constructor functions</h2>
+                    </legend>
+                    <div class="row">
+                        <div class="col-6">
+                            <a target="_blank" href='https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics'>MDN...</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <fieldset>
+                                <legend>
+                                    <h3>Description</h3>
+                                </legend>
+                                <div style="font-style: italic">
+                                "The constructor function is JavaScript's version of a class. You'll notice that it has all the features you'd expect in a function, although it doesn't return anything or explicitly create an object — it basically just defines properties and methods. You'll see the this keyword being used here as well — it is basically saying that whenever one of these object instances is created, the object's name property will be equal to the name value passed to the constructor call, and the greeting() method will use the name value passed to the constructor call too."
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <fieldset>
+                                <legend>
+                                    <h2>Javascript</h2>
+                                </legend>
+                                <pre><code class="javascript">
+function Person(name) {
+  this.name = name;
+  this.greeting = function() {
+    alert('Hi! I\'m ' + this.name + '.');
+  };
+}
+var person1 = new Person('Bob');
+var person2 = new Person('Sarah');
+}
+</code></pre>
+                            </fieldset>
+                        </div>
+                    
+                    <div class="row">
+                        <div class="col-6">
+                            <fieldset>
+                                <legend>
+                                    <h2>HTML</h2>
+                                </legend>
+                            <pre><code class="html">
+                                    <script>
+                                        function Person(name) {
+                                          this.name = name;
+                                          this.greeting = function() {
+                                            alert('Hi! I\'m ' + this.name + '.');
+                                          };
+                                      }
+                                        var person1 = new Person('Bob');
+                                        var person2 = new Person('Sarah');
+                                    </script>
+&lt;button onclick='person1.greeting()'&gt;Execute person1.greeting()&lt;/button&gt;
+&lt;button onclick='person2.greeting()'&gt;Execute person2.greeting()&lt;/button&gt;
+<button onclick='person1.greeting()'>Execute person1.greeting()</button>
+<button onclick='person2.greeting()'>Execute person2.greeting()</button>
+</code></pre>
+
+                            </fieldset>
+                        </div>
+                    </div>
+
+
+                </fieldset>
+                <!-- -->
+                <fieldset>
+                    <legend>
+                        <h2>Title</h2>
+                    </legend>
+                    <div class="row">
+                        <div class="col-6">
+                            <a target="_blank" href='https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics'>MDN...</a>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <fieldset>
+                                    <legend>
+                                        <h3>Description</h3>
+                                    </legend>
+
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <fieldset>
+                                <legend>
+                                    <h2>HTML</h2>
+                                </legend>
+                                
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <fieldset>
+                                <legend>
+                                    <h2>Result</h2>
+                                </legend>
+                            </fieldset>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- -->
+                <!-- -->
+                <fieldset>
+                    <legend>
+                        <h2>Title</h2>
+                    </legend>
+                    <div class="row">
+                        <div class="col-6">
+                            <a target="_blank" href='https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics'>MDN...</a>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <fieldset>
+                                    <legend>
+                                        <h3>Description</h3>
+                                    </legend>
+
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <fieldset>
+                                <legend>
+                                    <h2>HTML</h2>
+                                </legend>
+                                
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <fieldset>
+                                <legend>
+                                    <h2>Result</h2>
+                                </legend>
+                            </fieldset>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- -->
+                <!-- -->
+                <fieldset>
+                    <legend>
+                        <h2>Title</h2>
+                    </legend>
+                    <div class="row">
+                        <div class="col-6">
+                            <a target="_blank" href='https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics'>MDN...</a>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <fieldset>
+                                    <legend>
+                                        <h3>Description</h3>
+                                    </legend>
+
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <fieldset>
+                                <legend>
+                                    <h2>HTML</h2>
+                                </legend>
+                                
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <fieldset>
+                                <legend>
+                                    <h2>Result</h2>
+                                </legend>
+                            </fieldset>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- -->
+            </fieldset>
+
+        </div>
+
+    </body>
+</html>

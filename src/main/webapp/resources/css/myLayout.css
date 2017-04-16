@@ -101,11 +101,22 @@ pre {
     color: #EAD4D4;
     background-color: #1f0000;
     padding: 2em;
-    margin: 1em;
+/*    margin: 1em;
     margin-left: 2em;
+*/
+    overflow: auto;
+}
+.p4demo pre {
+    font-family: 'Roboto Mono', monospace;
+    background-color: white;
+    padding: 0em;
+/*    margin: 1em;
+    margin-left: 2em;
+*/
+    overflow: auto;
 }
 pre code{
-    line-height: 1.7em;
+    line-height: 1.2em;
     font-size: 1.1em;
 }
 .spacer{
@@ -161,6 +172,12 @@ legend {
     padding-right: 2px;
     border: none;
 }
+.p4demo legend {
+    display: block;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: 1px solid threedface;
+}
 
 div{
     overflow-wrap: break-word;
@@ -171,8 +188,48 @@ div{
     font-style: normal;
 }
 .p4demo{
-    font-size: .8em;
+    font-size: 1.3em;
+}
+.p4demo .class_e1{
+    color: red;
 }
 .p4div{
     color:blue;
+    text-align: left;
+}
+.p4demo .classA{
+    color: red;
+}
+.p4demo .classB{
+    font-style: italic;
+}
+.p4demo #toUpper{
+    color: blue;
+}
+.p4demo .c1{
+    color: blue;
+}
+.p4demo .c2{
+    color: red;
+}
+.p4demo .c3{
+    color: green;
+}
+.p4demo .c4{
+    color: cyan;
+}
+.p4demo .c5{
+    color: black;
+}
+.p4demo .c6{
+    color: yellow;
+}
+div ul li{
+    color: cyan;
+}
+div ul li ul li{
+    color: red;
+}
+div ul li ul div{
+    color: green;
 }
